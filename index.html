@@ -32,21 +32,22 @@
         opacity: 0;
       }
 
-      /* Custom scrollbar for comic section */
-      .comic-scrollbar::-webkit-scrollbar {
-        height: 8px;
+      /* New Flipbook Animation */
+      @keyframes flip-in {
+        from {
+          transform: perspective(1000px) rotateY(-60deg) scale(0.9);
+          opacity: 0;
+        }
+        to {
+          transform: perspective(1000px) rotateY(0deg) scale(1);
+          opacity: 1;
+        }
       }
-      .comic-scrollbar::-webkit-scrollbar-track {
-        background: rgba(10, 10, 20, 0.5);
-        border-radius: 4px;
+      .animate-flip-in {
+        animation: flip-in 0.6s ease-out forwards;
+        transform-origin: center left;
       }
-      .comic-scrollbar::-webkit-scrollbar-thumb {
-        background: #4a4a68;
-        border-radius: 4px;
-      }
-      .comic-scrollbar::-webkit-scrollbar-thumb:hover {
-        background: #6a6a88;
-      }
+
     </style>
 <script type="importmap">
 {
