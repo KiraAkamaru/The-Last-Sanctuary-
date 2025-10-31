@@ -2,6 +2,7 @@ import React from 'react';
 import HeroSection from './components/HeroSection';
 import LoreSection from './components/LoreSection';
 import MediaGallerySection from './components/MediaGallerySection';
+import GameplaySection from './components/GameplaySection';
 import ComicBookSection from './components/ComicBookSection';
 import Footer from './components/Footer';
 
@@ -12,6 +13,7 @@ function App() {
         <HeroSection />
         <LoreSection />
         <MediaGallerySection />
+        <GameplaySection />
         <ComicBookSection />
         <Footer />
       </main>
