@@ -1,47 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Last Sanctuary</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Inter:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
     <style>
       :root {
-        /* Check this path against your final file location! */
-        --background-image: url('/assets/images/gallery/gallery-sunset.jpg'); 
+        /* Update this path if you place the background image somewhere else under /public. */
+        --background-image: url('/assets/images/gallery/gallery-sunset.jpg');
       }
 
       body {
         font-family: 'Inter', sans-serif;
         background-color: #0a0a14;
         background-image: var(--background-image);
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        
-        /* Add these properties to make the image function as a full background: */
-        background-size: cover; 
+        background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
-        min-height: 100vh; /* Ensure body takes up full height */
+        min-height: 100vh;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
       }
-      
-      /* Animation Keyframes and Classes */
+
       @keyframes slow-zoom {
-        from { transform: scale(1); }
-        to { transform: scale(1.05); }
+        from {
+          transform: scale(1);
+        }
+        to {
+          transform: scale(1.05);
+        }
       }
+
       .animate-slow-zoom {
         animation: slow-zoom 20s ease-in-out infinite alternate;
       }
 
       @keyframes fade-in-slow {
-        from { opacity: 0; transform: translateY(10px); }
-        to { opacity: 1; transform: translateY(0); }
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
+
       .animate-fade-in-slow {
         animation: fade-in-slow 2s ease-out forwards;
         opacity: 0;
@@ -57,23 +69,25 @@
           opacity: 1;
         }
       }
+
       .animate-flip-in {
         animation: flip-in 0.6s ease-out forwards;
         transform-origin: center left;
       }
     </style>
+
     <script type="importmap">
-    {
-      "imports": {
-        "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-        "react/": "https://aistudiocdn.com/react@^19.2.0/",
-        "react": "https://aistudiocdn.com/react@^19.2.0"
+      {
+        "imports": {
+          "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+          "react/": "https://aistudiocdn.com/react@^19.2.0/",
+          "react": "https://aistudiocdn.com/react@^19.2.0"
+        }
       }
-    }
     </script>
-</head>
-<body>
+  </head>
+  <body>
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
-</body>
+  </body>
 </html>

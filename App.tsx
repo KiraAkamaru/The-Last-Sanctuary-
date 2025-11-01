@@ -8,7 +8,16 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="bg-[#0a0a14] text-slate-200 font-['Inter']">
+    <div
+      className="min-h-screen text-slate-200 font-['Inter']"
+      style={{
+        backgroundColor: '#0a0a14',
+        backgroundImage: 'var(--background-image)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed',
+      }}
+    >
       <main>
         <HeroSection />
         <LoreSection />

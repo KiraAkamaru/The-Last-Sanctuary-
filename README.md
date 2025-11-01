@@ -1,20 +1,83 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# The Last Sanctuary
 
-# Run and deploy your AI Studio app
+A cinematic one-page site for the meditative narrative game “The Last Sanctuary.” This project is ready to run locally with Vite and React 19.
 
-This contains everything you need to run your app locally.
+## Getting Started
 
-View your app in AI Studio: https://ai.studio/apps/drive/1zMVbnchLWFVzEUTPHMlyZhs0PukXNPSX
+### Prerequisites
+- [Node.js](https://nodejs.org/) 18 or newer
 
-## Run Locally
+### Installation
+```bash
+npm install
+```
 
-**Prerequisites:**  Node.js
+### Development
+```bash
+npm run dev
+```
 
+### Production build
+```bash
+npm run build
+```
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Asset Checklist
+All visual and audio assets are expected to live in Vite’s [`public/`](public) directory so they are served with the same root-relative paths used in the components. After pulling this repository, drop your files into the following folders (create them if they don’t already exist locally):
+
+```
+public/
+├── assets/
+│   └── images/
+│       └── gallery/
+│           └── gallery-sunset.jpg        ← background image used in index.html
+├── images/
+│   ├── gallery/
+│   │   ├── gallery-1.jpg
+│   │   ├── gallery-2.jpg
+│   │   ├── gallery-3.jpg
+│   │   ├── gallery-4.jpg
+│   │   ├── gallery-5.jpg
+│   │   └── gallery-poster.jpg
+│   ├── gameplay/
+│   │   ├── gameplay-1.jpg
+│   │   ├── gameplay-2.jpg
+│   │   ├── gameplay-3.jpg
+│   │   └── gameplay-poster.jpg
+│   └── lore/
+│       ├── lore-1.jpg
+│       ├── lore-2.jpg
+│       ├── lore-3.jpg
+│       ├── lore-4.jpg
+│       ├── lore-5.jpg
+│       └── lore-6.jpg
+├── comics/
+│   ├── panel-1.jpg
+│   ├── panel-2.jpg
+│   ├── panel-3.jpg
+│   ├── panel-4.jpg
+│   ├── panel-5.jpg
+│   └── panel-6.jpg
+└── videos/
+    ├── hero-video.mp4          ← used by the hero banner autoplay sequence
+    ├── teaser.mp4              ← displayed in the media gallery
+    └── gameplay-loop.mp4       ← showcased inside the gameplay spotlight
+```
+
+> **Tip:** If you only have a single clip right now, drop it into `public/videos/`
+> with the name you prefer (for example, replace `teaser.mp4`). The corresponding
+> component (`MediaGallerySection`, `HeroSection`, or `GameplaySection`) will pick
+> it up automatically as soon as the filename matches the path shown above.
+
+If you use different filenames, update the corresponding paths in the components.
+
+### Updating the comic book gallery
+The carousel in [`components/ComicBookSection.tsx`](components/ComicBookSection.tsx) pulls its data from
+[`data/comicPanels.ts`](data/comicPanels.ts). Drop your images into `public/comics/` and either match the filenames listed in
+`comicPanels.ts` or change the `imageUrl` entries to reflect your own naming convention and file extensions.
+
+You can add as many panels as you like—just append new objects to the exported `comicPanels` array (or remove existing ones) and
+update the `alt` text so screen reader users get the right description for each page.
+
+## Deployment
+Build the project (`npm run build`) and deploy the `dist/` folder to your static hosting provider of choice. Because all assets are referenced with root-relative URLs (e.g. `/images/...`), ensure the site is served from the domain root or configure your host to rewrite requests accordingly.
