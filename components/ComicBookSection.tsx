@@ -7,8 +7,8 @@ type ComicPanel = {
 };
 
 const comicPanels: ComicPanel[] = [
-  { imageUrl: '/comics/panel-1.jpg', alt: 'A lone figure looks over a vast, quiet valley.' },
-  { imageUrl: '/comics/panel-2.jpg', alt: 'A glowing sheep looks up at the sky.' },
+  { imageUrl: '/public/comics/1.png', alt: 'A lone figure looks over a vast, quiet valley.' },
+  { imageUrl: '/public/comics/2.png', alt: 'A glowing sheep looks up at the sky.' },
   { imageUrl: '/comics/panel-3.jpg', alt: "A close up of the shepherd's hand gently touching a plant." },
   { imageUrl: '/comics/panel-4.jpg', alt: 'The flock moving slowly across the meadow at dusk.' },
   { imageUrl: '/comics/panel-5.jpg', alt: 'Strange constellations appear in the night sky.' },
