@@ -8,28 +8,28 @@ type ComicPanel = {
 
 const comicPanels: ComicPanel[] = [
   {
-    imageUrl: '/comics/issue1-panel1.svg',
-    alt: 'Dawn light spills behind the broken sanctuary spire as the valley ridge glows.',
+    imageUrl: '/comics/1.png',
+    alt: 'A lone figure looks over a vast, quiet valley.',
   },
   {
-    imageUrl: '/comics/issue1-panel2.svg',
-    alt: 'The shepherd guides luminous sheep across a mist-draped ridge under teal skies.',
+    imageUrl: '/comics/2.png',
+    alt: 'A glowing sheep looks up at the sky.',
   },
   {
-    imageUrl: '/comics/issue1-panel3.svg',
-    alt: 'Cupped hands cradle a radiant seedling that blooms with rose-gold light.',
+    imageUrl: '/comics/3.png',
+    alt: "A close up of the shepherd's hand gently touching a plant.",
   },
   {
-    imageUrl: '/comics/issue1-panel4.svg',
-    alt: 'The flock huddles near crystalline ruins while stars shimmer in the sheltering night.',
+    imageUrl: '/comics/4.png',
+    alt: 'The flock moving slowly across the meadow at dusk.',
   },
   {
-    imageUrl: '/comics/issue1-panel5.svg',
-    alt: 'Constellations spiral into an ancient sigil over the valley at rose dusk.',
+    imageUrl: '/comics/5.png',
+    alt: 'Strange constellations appear in the night sky.',
   },
   {
-    imageUrl: '/comics/issue1-panel6.svg',
-    alt: 'The shepherd writes by the hearth as dawn breaks beyond the sanctuary walls.',
+    imageUrl: '/comics/6.png',
+    alt: 'The shepherd sits by a fire, the flock resting nearby.',
   },
 ];
 
