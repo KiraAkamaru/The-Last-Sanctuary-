@@ -8,23 +8,28 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    
     <style>
-   <style>
-  :root {
-    --background-image: url('assets/images/gallery/gallery-sunset.jpg');
-  }
+      :root {
+        /* Check this path against your final file location! */
+        --background-image: url('/images/gallery-sunset.jpg'); 
+      }
 
-  body {
-    font-family: 'Inter', sans-serif;
-    background-color: #0a0a14;
-    background-image: var(--background-image);
-  }
       body {
         font-family: 'Inter', sans-serif;
-        background-color: #0a0a14; /* A dark, cosmic blue-black */
+        background-color: #0a0a14;
+        background-image: var(--background-image);
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
+        
+        /* Add these properties to make the image function as a full background: */
+        background-size: cover; 
+        background-position: center center;
+        background-repeat: no-repeat;
+        min-height: 100vh; /* Ensure body takes up full height */
       }
+      
+      /* Animation Keyframes and Classes */
       @keyframes slow-zoom {
         from { transform: scale(1); }
         to { transform: scale(1.05); }
@@ -42,7 +47,6 @@
         opacity: 0;
       }
 
-      /* New Flipbook Animation */
       @keyframes flip-in {
         from {
           transform: perspective(1000px) rotateY(-60deg) scale(0.9);
@@ -57,17 +61,16 @@
         animation: flip-in 0.6s ease-out forwards;
         transform-origin: center left;
       }
-
     </style>
-<script type="importmap">
-{
-  "imports": {
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "react": "https://aistudiocdn.com/react@^19.2.0"
-  }
-}
-</script>
+    <script type="importmap">
+    {
+      "imports": {
+        "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+        "react/": "https://aistudiocdn.com/react@^19.2.0/",
+        "react": "https://aistudiocdn.com/react@^19.2.0"
+      }
+    }
+    </script>
 </head>
 <body>
     <div id="root"></div>
