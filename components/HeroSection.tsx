@@ -1,28 +1,30 @@
 import React from 'react';
 
-const HeroSection = () => {
+const HeroSection: React.FC = () => {
   return (
-    <section 
-      className="h-screen flex flex-col justify-center items-center text-center p-8 relative overflow-hidden"
-    >
-      <video 
-        autoPlay 
-        loop 
-        muted 
+    <section className="relative flex h-screen flex-col items-center justify-center overflow-hidden p-8 text-center">
+      <video
+        autoPlay
+        loop
+        muted
         playsInline
-        className="absolute top-1/2 left-1/2 w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 z-0 opacity-60"
-        poster="/images/hero-poster.jpeg"
+        className="absolute left-1/2 top-1/2 h-full w-full -translate-x-1/2 -translate-y-1/2 object-cover opacity-60"
+        poster="/images/hero-poster.jpg"
       >
         <source src="/videos/hero-video.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-[#0a0a14] via-[#0a0a14]/50 to-transparent z-10"></div>
+
+      <div className="absolute inset-0 z-10 bg-gradient-to-t from-[#0a0a14] via-[#0a0a14]/50 to-transparent" />
 
       <div className="relative z-20">
-        <h1 className="text-6xl md:text-8xl font-['Cormorant_Garamond'] font-bold text-white [text-shadow:0_0_12px_rgba(251,191,36,0.5)] animate-fade-in-slow">
+        <h1 className="animate-fade-in-slow text-6xl font-bold text-white [text-shadow:0_0_12px_rgba(251,191,36,0.5)] md:text-8xl font-['Cormorant_Garamond']">
           The Last Sanctuary
         </h1>
-        <p className="mt-4 text-lg md:text-xl text-slate-300 max-w-2xl animate-fade-in-slow" style={{ animationDelay: '1s' }}>
+        <p
+          className="animate-fade-in-slow mt-4 max-w-2xl text-lg text-slate-300 md:text-xl"
+          style={{ animationDelay: '1s' }}
+        >
           Built by gods who grew tired of eternity — kept alive by those who still feel.
         </p>
       </div>
