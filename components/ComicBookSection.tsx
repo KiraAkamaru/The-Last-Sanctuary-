@@ -7,12 +7,30 @@ type ComicPanel = {
 };
 
 const comicPanels: ComicPanel[] = [
-  { imageUrl: '/comics/panel-1.jpg', alt: 'A lone figure looks over a vast, quiet valley.' },
-  { imageUrl: '/comics/panel-2.jpg', alt: 'A glowing sheep looks up at the sky.' },
-  { imageUrl: '/comics/panel-3.jpg', alt: "A close up of the shepherd's hand gently touching a plant." },
-  { imageUrl: '/comics/panel-4.jpg', alt: 'The flock moving slowly across the meadow at dusk.' },
-  { imageUrl: '/comics/panel-5.jpg', alt: 'Strange constellations appear in the night sky.' },
-  { imageUrl: '/comics/panel-6.jpg', alt: 'The shepherd sits by a fire, the flock resting nearby.' },
+  {
+    imageUrl: '/comics/1.png',
+    alt: 'A lone figure looks over a vast, quiet valley.',
+  },
+  {
+    imageUrl: '/comics/2.png',
+    alt: 'A glowing sheep looks up at the sky.',
+  },
+  {
+    imageUrl: '/comics/3.png',
+    alt: "A close up of the shepherd's hand gently touching a plant.",
+  },
+  {
+    imageUrl: '/comics/4.png',
+    alt: 'The flock moving slowly across the meadow at dusk.',
+  },
+  {
+    imageUrl: '/comics/5.png',
+    alt: 'Strange constellations appear in the night sky.',
+  },
+  {
+    imageUrl: '/comics/6.png',
+    alt: 'The shepherd sits by a fire, the flock resting nearby.',
+  },
 ];
 
 const ComicBookSection: React.FC = () => {

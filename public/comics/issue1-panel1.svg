@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="dawnGradient" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#020618" />
+      <stop offset="50%" stop-color="#132f5c" />
+      <stop offset="100%" stop-color="#f1c27d" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#dawnGradient)" />
+  <path d="M0 420 C200 360 320 380 480 420 C640 460 720 450 800 410 L800 600 L0 600 Z" fill="#060c22" opacity="0.85" />
+  <polygon points="520,180 600,440 440,440" fill="#0f1f3a" />
+  <polygon points="520,220 570,420 470,420" fill="#1b3760" opacity="0.8" />
+  <circle cx="520" cy="160" r="48" fill="#ffe5a1" opacity="0.85" />
+  <path d="M80 500 C140 460 220 440 300 470" stroke="#f6d6b8" stroke-width="6" stroke-linecap="round" fill="none" opacity="0.6" />
+  <path d="M320 470 C360 450 400 440 460 460" stroke="#f6d6b8" stroke-width="6" stroke-linecap="round" fill="none" opacity="0.6" />
+</svg>
