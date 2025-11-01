@@ -71,6 +71,19 @@ public/
 
 If you use different filenames, update the corresponding paths in the components.
 
+### Swapping background art in the lore timeline
+Each chapter in the vertical lore scroll is defined in [`data/loreChapters.ts`](data/loreChapters.ts). Update the `imageUrl` value to point at any root-relative file inside `public/`.
+
+```ts
+{
+  title: 'The Meadow',
+  text: 'And so they built it... bored gods.',
+  imageUrl: '/images/gallery/gallery-storm-lightning.jpg',
+}
+```
+
+In the example above, the fourth chapter (“The Meadow”) pulls in `public/images/gallery/gallery-storm-lightning.jpg`. Drop your photo into that folder (or adjust the path to wherever you stored it) and the page will render it the next time you reload the site.
+
 ### Updating the comic book gallery
 The carousel in [`components/ComicBookSection.tsx`](components/ComicBookSection.tsx) pulls its data from
 [`data/comicPanels.ts`](data/comicPanels.ts). Drop your images into `public/comics/` and either match the filenames listed in
