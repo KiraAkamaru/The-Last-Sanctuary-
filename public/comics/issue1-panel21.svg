@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img">
+  <defs>
+    <linearGradient id="panelGlow" x1="15%" y1="0%" x2="85%" y2="100%">
+      <stop offset="0%" stop-color="#1e2745" />
+      <stop offset="50%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#050712" />
+    </linearGradient>
+    <clipPath id="panelWindow">
+      <rect x="72" y="72" width="880" height="880" rx="88" />
+    </clipPath>
+  </defs>
+  <rect width="1024" height="1024" fill="#04040a" rx="120" />
+  <rect x="32" y="32" width="960" height="960" fill="#090918" rx="104" />
+  <rect x="48" y="48" width="928" height="928" fill="url(#panelGlow)" opacity="0.35" rx="96" />
+  <g clip-path="url(#panelWindow)">
+    <rect x="72" y="72" width="880" height="880" fill="#000" />
+    <image href="./21.png" x="72" y="72" width="880" height="880" preserveAspectRatio="xMidYMid slice" />
+  </g>
+  <rect x="48" y="48" width="928" height="928" fill="none" stroke="#1f2937" stroke-width="14" opacity="0.85" rx="96" />
+  <rect x="62" y="62" width="900" height="900" fill="none" stroke="#0f172a" stroke-width="10" opacity="0.7" rx="90" />
+</svg>
