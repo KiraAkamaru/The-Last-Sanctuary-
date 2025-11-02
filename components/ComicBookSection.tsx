@@ -9,95 +9,27 @@ type ComicPanel = {
 const comicPanels: ComicPanel[] = [
   {
     imageUrl: '/comics/1.png',
-    alt: 'A lone wanderer surveys a moonlit valley from a cliff edge.',
+    alt: 'A lone figure looks over a vast, quiet valley.',
   },
   {
     imageUrl: '/comics/2.png',
-    alt: 'A spectral ram illuminates a hillside with its glowing fleece.',
+    alt: 'A glowing sheep looks up at the sky.',
   },
   {
     imageUrl: '/comics/3.png',
-    alt: "The shepherd brushes frost from a hardy mountain plant.",
+    alt: "A close up of the shepherd's hand gently touching a plant.",
   },
   {
     imageUrl: '/comics/4.png',
-    alt: 'Flock silhouettes wind through the meadow beneath auroras.',
+    alt: 'The flock moving slowly across the meadow at dusk.',
   },
   {
     imageUrl: '/comics/5.png',
-    alt: 'Constellations spiral into a luminous whirlpool over the flock.',
+    alt: 'Strange constellations appear in the night sky.',
   },
   {
     imageUrl: '/comics/6.png',
-    alt: 'The shepherd tends a campfire while the herd sleeps in a ring.',
-  },
-  {
-    imageUrl: '/comics/7.png',
-    alt: 'An ancient stone arch crackles with otherworldly energy.',
-  },
-  {
-    imageUrl: '/comics/8.png',
-    alt: 'A close-up of a rune-covered staff sparking with blue light.',
-  },
-  {
-    imageUrl: '/comics/9.png',
-    alt: 'A celestial map unfurls showing hidden paths through the stars.',
-  },
-  {
-    imageUrl: '/comics/10.png',
-    alt: 'The shepherd opens a journal revealing sketches of cosmic beasts.',
-  },
-  {
-    imageUrl: '/comics/11.png',
-    alt: 'Storm clouds gather as the flock huddles around a glowing sigil.',
-  },
-  {
-    imageUrl: '/comics/12.png',
-    alt: 'Lightning arcs across the valley framing the guardian statue.',
-  },
-  {
-    imageUrl: '/comics/13.png',
-    alt: 'A vision of the sanctuary emerges above the shepherd’s palm.',
-  },
-  {
-    imageUrl: '/comics/14.png',
-    alt: 'Close friends clasp forearms before entering a shadowed gate.',
-  },
-  {
-    imageUrl: '/comics/15.png',
-    alt: 'The gate opens onto a corridor of suspended crystal lanterns.',
-  },
-  {
-    imageUrl: '/comics/16.png',
-    alt: 'Runic machinery awakens as the staff is placed in its cradle.',
-  },
-  {
-    imageUrl: '/comics/17.png',
-    alt: 'A mosaic on the floor animates, charting the lost sanctuary.',
-  },
-  {
-    imageUrl: '/comics/18.png',
-    alt: 'The shepherd and flock cross a bridge over floating monoliths.',
-  },
-  {
-    imageUrl: '/comics/19.png',
-    alt: 'A guardian spirit rises from the depths of a reflecting pool.',
-  },
-  {
-    imageUrl: '/comics/20.png',
-    alt: 'The spirit imparts a starmap woven from threads of light.',
-  },
-  {
-    imageUrl: '/comics/21.png',
-    alt: 'Night blossoms bloom as the sanctuary domes open overhead.',
-  },
-  {
-    imageUrl: '/comics/22.png',
-    alt: 'Villagers cheer as the shepherd leads the flock into the haven.',
-  },
-  {
-    imageUrl: '/comics/23.png',
-    alt: 'Dawn breaks over the sanctuary revealing a restored horizon.',
+    alt: 'The shepherd sits by a fire, the flock resting nearby.',
   },
 ];
 
