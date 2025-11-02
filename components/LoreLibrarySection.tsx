@@ -4,16 +4,14 @@ import FadeInSection from './FadeInSection';
 const loreParagraphs: React.ReactNode[] = [
   (
     <>
-      Eons collapsed into moments, and the creators of all things found themselves adrift within their own perfect, silent
-      eternity. From this weariness, a singular thought bloomed: a desire not for more creation, but for a single, <em>perfect
-      memory</em> that could be held close when the stars finally dimmed.
+      Tired of endless omnipotence, the architects of creation pressed their eternity into a single, quiet refuge, trading
+      boundless power for one preserved moment of peace.
     </>
   ),
   (
     <>
-      To secure that memory, they shed their cosmic forms, pouring consciousness into starlight and nebula dust. Every
-      recollection, every fleeting emotion of their infinite lives, was encoded into the fabric of a new, smaller reality—
-      <q>a universe in a bottle</q> cradled within the dark between galaxies.
+      They sealed their memories inside starlight and song, weaving a pocket universe where every glimmer holds a story they
+      refused to let fade.
     </>
   ),
   (
@@ -25,21 +23,20 @@ const loreParagraphs: React.ReactNode[] = [
   ),
   (
     <>
-      They wove light into a meadow that would never fade, painted by a sun that set only when the keepers wished to dream.
-      Winds carried whispers of first dawns and final farewells, while crystal streams mirrored constellations from long-dead
-      skies.
+      The sanctuary unfurls as a meadow of curated twilight, tuned to whatever rhythm its caretakers need to remember, rest,
+      or dream.
     </>
   ),
   (
     <>
-      Into this meadow they ushered the evolved flock—gentle creatures whose wool held galaxies of thought. Each was a living
-      library, carrying the fragment of a forgotten star, a lost love, or a lullaby hummed at the birth of oceans.
+      Gentle, woolen archivists wander the grass, each carrying fragments of promises, constellations, and lullabies from the
+      long history of the cosmos.
     </>
   ),
   (
     <>
-      Among them walked the Star Sheep, chosen not as a ruler but as a heart. Its dreams ripple through the grasses, shaping
-      clouds into memories and coloring dawn with the hues of abandoned worlds. When it sleeps, the meadow listens.
+      At the heart drifts the Star Sheep, radiating dreams that recolor the sky and keep the sanctuary&apos;s memories softly
+      alive for anyone who listens.
     </>
   ),
   (
