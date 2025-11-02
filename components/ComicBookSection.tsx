@@ -114,17 +114,17 @@ const ComicBookSection: React.FC = () => {
 
   return (
     <section className="bg-[#0a0a14] py-20">
-      <div className="container mx-auto px-6">
-        <FadeInSection className="text-center">
+      <div className="mx-auto w-full px-4 sm:px-6 lg:px-12">
+        <FadeInSection className="mx-auto max-w-4xl text-center">
           <h2 className="mb-4 text-4xl text-white md:text-5xl font-['Cormorant_Garamond']">From the Shepherd&apos;s Journal</h2>
           <p className="mx-auto mb-12 max-w-2xl text-slate-400">A few recovered fragments of a story without an end.</p>
         </FadeInSection>
 
-        <FadeInSection className="mx-auto max-w-5xl">
-          <div className="relative flex flex-col items-center">
-            <div className="w-full max-w-[22rem] sm:max-w-[26rem] md:max-w-[30rem] lg:max-w-[34rem]">
+        <FadeInSection className="w-full">
+          <div className="relative flex min-h-screen w-full flex-col items-center justify-center gap-8">
+            <div className="w-full">
               <div className="relative w-full overflow-visible">
-                <div className="aspect-square rounded-[2.5rem] bg-[#05050b] p-5 shadow-[0_25px_60px_rgba(0,0,0,0.6)]">
+                <div className="min-h-[60vh] rounded-[2.5rem] bg-[#05050b] p-6 sm:p-8 lg:p-12 shadow-[0_25px_60px_rgba(0,0,0,0.6)]">
                   <div className="flex h-full w-full items-center justify-center overflow-hidden rounded-[1.75rem] bg-black">
                     <img
                       key={currentIndex}
@@ -137,7 +137,7 @@ const ComicBookSection: React.FC = () => {
               </div>
             </div>
 
-            <div className="mt-8 flex w-full max-w-[28rem] items-center justify-between px-2 text-sm font-medium tracking-wide text-slate-300">
+            <div className="flex w-full max-w-4xl flex-wrap items-center justify-between gap-4 px-4 text-sm font-medium tracking-wide text-slate-300">
               <button
                 type="button"
                 onClick={goToPrevious}
