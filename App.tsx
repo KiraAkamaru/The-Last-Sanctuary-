@@ -1,5 +1,6 @@
 import React from 'react';
 import HeroSection from './components/HeroSection';
+import LoreLibrarySection from './components/LoreLibrarySection';
 import LoreSection from './components/LoreSection';
 import GameplaySection from './components/GameplaySection';
 import ComicBookSection from './components/ComicBookSection';
@@ -19,6 +20,7 @@ function App() {
     >
       <main>
         <HeroSection />
+        <LoreLibrarySection />
         <LoreSection />
         <GameplaySection />
         <ComicBookSection />
