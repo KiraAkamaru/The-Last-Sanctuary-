@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <radialGradient id="seedGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffe5b5" />
+      <stop offset="60%" stop-color="#e59b9b" />
+      <stop offset="100%" stop-color="#421b3f" />
+    </radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="#2c0f36" />
+  <circle cx="400" cy="300" r="260" fill="url(#seedGlow)" opacity="0.85" />
+  <path d="M260 370 C320 430 360 450 400 440 C440 430 480 400 520 360" stroke="#f9dede" stroke-width="30" stroke-linecap="round" fill="none" opacity="0.3" />
+  <path d="M280 360 C320 400 360 410 400 400 C440 390 480 360 520 320" stroke="#f9dede" stroke-width="22" stroke-linecap="round" fill="none" opacity="0.45" />
+  <path d="M360 320 Q400 260 440 320" stroke="#ffeccd" stroke-width="14" stroke-linecap="round" fill="none" />
+  <circle cx="400" cy="300" r="48" fill="#fff3d9" />
+  <path d="M400 240 C430 260 440 280 440 320 C440 360 420 380 400 400" stroke="#f5cfcf" stroke-width="10" stroke-linecap="round" fill="none" />
+  <path d="M400 240 C370 260 360 280 360 320 C360 360 380 380 400 400" stroke="#f5cfcf" stroke-width="10" stroke-linecap="round" fill="none" />
+</svg>

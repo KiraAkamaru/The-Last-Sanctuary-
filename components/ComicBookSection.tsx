@@ -7,12 +7,98 @@ type ComicPanel = {
 };
 
 const comicPanels: ComicPanel[] = [
-  { imageUrl: '/comics/panel-1.jpg', alt: 'A lone figure looks over a vast, quiet valley.' },
-  { imageUrl: '/comics/panel-2.jpg', alt: 'A glowing sheep looks up at the sky.' },
-  { imageUrl: '/comics/panel-3.jpg', alt: "A close up of the shepherd's hand gently touching a plant." },
-  { imageUrl: '/comics/panel-4.jpg', alt: 'The flock moving slowly across the meadow at dusk.' },
-  { imageUrl: '/comics/panel-5.jpg', alt: 'Strange constellations appear in the night sky.' },
-  { imageUrl: '/comics/panel-6.jpg', alt: 'The shepherd sits by a fire, the flock resting nearby.' },
+  {
+    imageUrl: '/comics/1.png',
+    alt: 'A lone wanderer surveys a moonlit valley from a cliff edge.',
+  },
+  {
+    imageUrl: '/comics/2.png',
+    alt: 'A spectral ram illuminates a hillside with its glowing fleece.',
+  },
+  {
+    imageUrl: '/comics/3.png',
+    alt: "The shepherd brushes frost from a hardy mountain plant.",
+  },
+  {
+    imageUrl: '/comics/4.png',
+    alt: 'Flock silhouettes wind through the meadow beneath auroras.',
+  },
+  {
+    imageUrl: '/comics/5.png',
+    alt: 'Constellations spiral into a luminous whirlpool over the flock.',
+  },
+  {
+    imageUrl: '/comics/6.png',
+    alt: 'The shepherd tends a campfire while the herd sleeps in a ring.',
+  },
+  {
+    imageUrl: '/comics/7.png',
+    alt: 'An ancient stone arch crackles with otherworldly energy.',
+  },
+  {
+    imageUrl: '/comics/8.png',
+    alt: 'A close-up of a rune-covered staff sparking with blue light.',
+  },
+  {
+    imageUrl: '/comics/9.png',
+    alt: 'A celestial map unfurls showing hidden paths through the stars.',
+  },
+  {
+    imageUrl: '/comics/10.png',
+    alt: 'The shepherd opens a journal revealing sketches of cosmic beasts.',
+  },
+  {
+    imageUrl: '/comics/11.png',
+    alt: 'Storm clouds gather as the flock huddles around a glowing sigil.',
+  },
+  {
+    imageUrl: '/comics/12.png',
+    alt: 'Lightning arcs across the valley framing the guardian statue.',
+  },
+  {
+    imageUrl: '/comics/13.png',
+    alt: 'A vision of the sanctuary emerges above the shepherd’s palm.',
+  },
+  {
+    imageUrl: '/comics/14.png',
+    alt: 'Close friends clasp forearms before entering a shadowed gate.',
+  },
+  {
+    imageUrl: '/comics/15.png',
+    alt: 'The gate opens onto a corridor of suspended crystal lanterns.',
+  },
+  {
+    imageUrl: '/comics/16.png',
+    alt: 'Runic machinery awakens as the staff is placed in its cradle.',
+  },
+  {
+    imageUrl: '/comics/17.png',
+    alt: 'A mosaic on the floor animates, charting the lost sanctuary.',
+  },
+  {
+    imageUrl: '/comics/18.png',
+    alt: 'The shepherd and flock cross a bridge over floating monoliths.',
+  },
+  {
+    imageUrl: '/comics/19.png',
+    alt: 'A guardian spirit rises from the depths of a reflecting pool.',
+  },
+  {
+    imageUrl: '/comics/20.png',
+    alt: 'The spirit imparts a starmap woven from threads of light.',
+  },
+  {
+    imageUrl: '/comics/21.png',
+    alt: 'Night blossoms bloom as the sanctuary domes open overhead.',
+  },
+  {
+    imageUrl: '/comics/22.png',
+    alt: 'Villagers cheer as the shepherd leads the flock into the haven.',
+  },
+  {
+    imageUrl: '/comics/23.png',
+    alt: 'Dawn breaks over the sanctuary revealing a restored horizon.',
+  },
 ];
 
 const ComicBookSection: React.FC = () => {
@@ -34,14 +120,14 @@ const ComicBookSection: React.FC = () => {
           <p className="mx-auto mb-12 max-w-2xl text-slate-400">A few recovered fragments of a story without an end.</p>
         </FadeInSection>
 
-        <FadeInSection className="mx-auto max-w-4xl">
+        <FadeInSection className="mx-auto max-w-3xl">
           <div className="relative">
-            <div className="aspect-[4/3] overflow-hidden rounded-lg bg-black shadow-2xl shadow-black/50">
+            <div className="aspect-[3/4] overflow-hidden rounded-lg bg-black shadow-2xl shadow-black/50">
               <img
                 key={currentIndex}
                 src={comicPanels[currentIndex].imageUrl}
                 alt={comicPanels[currentIndex].alt}
-                className="h-full w-full object-contain animate-flip-in"
+                className="h-full w-full object-cover animate-flip-in"
               />
             </div>
 
