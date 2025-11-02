@@ -52,14 +52,14 @@ const ComicBookSection: React.FC = () => {
           <p className="mx-auto mb-12 max-w-2xl text-slate-400">A few recovered fragments of a story without an end.</p>
         </FadeInSection>
 
-        <FadeInSection className="mx-auto max-w-4xl">
+        <FadeInSection className="mx-auto max-w-3xl">
           <div className="relative">
-            <div className="aspect-[4/3] overflow-hidden rounded-lg bg-black shadow-2xl shadow-black/50">
+            <div className="aspect-[3/4] overflow-hidden rounded-lg bg-black shadow-2xl shadow-black/50">
               <img
                 key={currentIndex}
                 src={comicPanels[currentIndex].imageUrl}
                 alt={comicPanels[currentIndex].alt}
-                className="h-full w-full object-contain animate-flip-in"
+                className="h-full w-full object-cover animate-flip-in"
               />
             </div>
 
