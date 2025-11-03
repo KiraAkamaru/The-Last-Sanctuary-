@@ -103,6 +103,7 @@ const comicPanels: ComicPanel[] = [
 
 const ComicBookSection: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isFullscreen, setIsFullscreen] = useState(false);
 
   const goToPrevious = () => {
     setCurrentIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : 0));
@@ -111,6 +112,26 @@ const ComicBookSection: React.FC = () => {
   const goToNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex < comicPanels.length - 1 ? prevIndex + 1 : prevIndex));
   };
+
+  const toggleFullscreen = () => {
+    setIsFullscreen((prev) => !prev);
+  };
+
+  const viewerLayoutClasses = `relative flex w-full flex-col items-center justify-center gap-8 ${
+    isFullscreen ? 'min-h-screen h-screen' : 'mx-auto sm:max-w-3xl md:max-w-4xl lg:max-w-5xl'
+  }`;
+
+  const panelFrameClasses = `w-full rounded-[2.5rem] bg-[#05050b] p-6 sm:p-8 lg:p-12 shadow-[0_25px_60px_rgba(0,0,0,0.6)] ${
+    isFullscreen ? 'h-full min-h-[60vh]' : 'mx-auto max-h-[70vh] sm:max-w-3xl md:max-w-4xl lg:max-w-5xl'
+  }`;
+
+  const imageWrapperClasses = `flex w-full items-center justify-center overflow-hidden rounded-[1.75rem] bg-black ${
+    isFullscreen ? 'h-full' : 'mx-auto max-h-[70vh]'
+  }`;
+
+  const imageClasses = `w-full object-contain animate-flip-in ${
+    isFullscreen ? 'h-full' : 'h-auto max-h-[70vh]'
+  }`;
 
   return (
     <section className="bg-[#0a0a14] py-20">
@@ -121,16 +142,16 @@ const ComicBookSection: React.FC = () => {
         </FadeInSection>
 
         <FadeInSection className="w-full">
-          <div className="relative flex min-h-screen w-full flex-col items-center justify-center gap-8">
+          <div className={viewerLayoutClasses}>
             <div className="w-full">
               <div className="relative w-full overflow-visible">
-                <div className="min-h-[60vh] rounded-[2.5rem] bg-[#05050b] p-6 sm:p-8 lg:p-12 shadow-[0_25px_60px_rgba(0,0,0,0.6)]">
-                  <div className="flex h-full w-full items-center justify-center overflow-hidden rounded-[1.75rem] bg-black">
+                <div className={panelFrameClasses}>
+                  <div className={imageWrapperClasses}>
                     <img
                       key={currentIndex}
                       src={comicPanels[currentIndex].imageUrl}
                       alt={comicPanels[currentIndex].alt}
-                      className="h-full w-full object-contain animate-flip-in"
+                      className={imageClasses}
                     />
                   </div>
                 </div>
@@ -151,9 +172,21 @@ const ComicBookSection: React.FC = () => {
                 <span>Prev</span>
               </button>
 
-              <span className="font-mono text-xs uppercase tracking-[0.35em] text-slate-400">
-                {currentIndex + 1} / {comicPanels.length}
-              </span>
+              <div className="flex flex-1 items-center justify-center gap-4">
+                <span className="font-mono text-xs uppercase tracking-[0.35em] text-slate-400">
+                  {currentIndex + 1} / {comicPanels.length}
+                </span>
+
+                <button
+                  type="button"
+                  onClick={toggleFullscreen}
+                  className="rounded-full border border-slate-600 px-4 py-2 text-xs uppercase tracking-[0.35em] transition-colors hover:border-white hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-white focus-visible:ring-offset-[#0a0a14]"
+                  aria-label={isFullscreen ? 'Exit fullscreen comic view' : 'Enter fullscreen comic view'}
+                  aria-pressed={isFullscreen}
+                >
+                  {isFullscreen ? 'Exit fullscreen' : 'Fullscreen'}
+                </button>
+              </div>
 
               <button
                 type="button"
