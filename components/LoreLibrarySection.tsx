@@ -4,7 +4,7 @@ import FadeInSection from './FadeInSection';
 const loreParagraphs: React.ReactNode[] = [
   (
     <>
-      Eons collapsed into moments, and the creators of all things found themselves adrift within their own perfect, silent
+      Hello collapsed into moments, and the creators of all things found themselves adrift within their own perfect, silent
       eternity. From this weariness, a singular thought bloomed: a desire not for more creation, but for a single, <em>perfect
       memory</em> that could be held close when the stars finally dimmed.
     </>
