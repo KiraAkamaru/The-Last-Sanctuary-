@@ -102,14 +102,45 @@ const comicPanels: ComicPanel[] = [
 ];
 
 const ComicBookSection: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [outgoingIndex, setOutgoingIndex] = useState<number | null>(null);
+  const [isAnimating, setIsAnimating] = useState(false);
+  const [direction, setDirection] = useState<'forward' | 'backward'>('forward');
+
+  const beginTransition = (targetIndex: number) => {
+    if (targetIndex === activeIndex || targetIndex < 0 || targetIndex >= comicPanels.length) {
+      return;
+    }
+
+    setDirection(targetIndex > activeIndex ? 'forward' : 'backward');
+    setOutgoingIndex(activeIndex);
+    setActiveIndex(targetIndex);
+    setIsAnimating(true);
+  };
 
   const goToPrevious = () => {
-    setCurrentIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : 0));
+    if (activeIndex === 0 || isAnimating) {
+      return;
+    }
+
+    beginTransition(activeIndex - 1);
   };
 
   const goToNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex < comicPanels.length - 1 ? prevIndex + 1 : prevIndex));
+    if (activeIndex === comicPanels.length - 1 || isAnimating) {
+      return;
+    }
+
+    beginTransition(activeIndex + 1);
+  };
+
+  const handleAnimationEnd = (event: React.AnimationEvent<HTMLImageElement>) => {
+    if (event.animationName !== 'flip-in') {
+      return;
+    }
+
+    setOutgoingIndex(null);
+    setIsAnimating(false);
   };
 
   return (
@@ -125,12 +156,27 @@ const ComicBookSection: React.FC = () => {
             <div className="w-full">
               <div className="relative w-full overflow-visible">
                 <div className="min-h-[60vh] rounded-[2.5rem] bg-[#05050b] p-6 sm:p-8 lg:p-12 shadow-[0_25px_60px_rgba(0,0,0,0.6)]">
-                  <div className="flex h-full w-full items-center justify-center overflow-hidden rounded-[1.75rem] bg-black">
+                  <div className="relative flex h-full w-full items-center justify-center overflow-hidden rounded-[1.75rem] bg-black">
+                    {outgoingIndex !== null && (
+                      <img
+                        key={`panel-outgoing-${outgoingIndex}`}
+                        src={comicPanels[outgoingIndex].imageUrl}
+                        alt={comicPanels[outgoingIndex].alt}
+                        className="absolute inset-0 z-10 h-full w-full object-contain animate-flip-out"
+                        style={{
+                          transformOrigin: direction === 'forward' ? 'center left' : 'center right',
+                        }}
+                      />
+                    )}
                     <img
-                      key={currentIndex}
-                      src={comicPanels[currentIndex].imageUrl}
-                      alt={comicPanels[currentIndex].alt}
-                      className="h-full w-full object-contain animate-flip-in"
+                      key={`panel-active-${activeIndex}`}
+                      src={comicPanels[activeIndex].imageUrl}
+                      alt={comicPanels[activeIndex].alt}
+                      className="relative z-20 h-full w-full object-contain animate-flip-in"
+                      style={{
+                        transformOrigin: direction === 'forward' ? 'center left' : 'center right',
+                      }}
+                      onAnimationEnd={handleAnimationEnd}
                     />
                   </div>
                 </div>
@@ -141,7 +187,7 @@ const ComicBookSection: React.FC = () => {
               <button
                 type="button"
                 onClick={goToPrevious}
-                disabled={currentIndex === 0}
+                disabled={activeIndex === 0 || isAnimating}
                 className="flex items-center space-x-2 transition-colors hover:text-white disabled:cursor-not-allowed disabled:text-slate-600"
                 aria-label="Previous comic panel"
               >
@@ -152,13 +198,13 @@ const ComicBookSection: React.FC = () => {
               </button>
 
               <span className="font-mono text-xs uppercase tracking-[0.35em] text-slate-400">
-                {currentIndex + 1} / {comicPanels.length}
+                {activeIndex + 1} / {comicPanels.length}
               </span>
 
               <button
                 type="button"
                 onClick={goToNext}
-                disabled={currentIndex === comicPanels.length - 1}
+                disabled={activeIndex === comicPanels.length - 1 || isAnimating}
                 className="flex items-center space-x-2 transition-colors hover:text-white disabled:cursor-not-allowed disabled:text-slate-600"
                 aria-label="Next comic panel"
               >
