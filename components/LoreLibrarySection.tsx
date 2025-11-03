@@ -4,55 +4,153 @@ import FadeInSection from './FadeInSection';
 const loreParagraphs: React.ReactNode[] = [
   (
     <>
-      Hello collapsed into moments, and the creators of all things found themselves adrift within their own perfect, silent
-      eternity. From this weariness, a singular thought bloomed: a desire not for more creation, but for a single, <em>perfect
-      memory</em> that could be held close when the stars finally dimmed.
+      <strong>The Story of the Last Meadow, or, Why Being a God is a Dreadful Bore</strong>
+      <br />
+      <em>(As told by the Star Sheep)</em>
     </>
   ),
   (
     <>
-      To secure that memory, they shed their cosmic forms, pouring consciousness into starlight and nebula dust. Every
-      recollection, every fleeting emotion of their infinite lives, was encoded into the fabric of a new, smaller reality—
-      <q>a universe in a bottle</q> cradled within the dark between galaxies.
+      A long, long time from now—so long that the very concept of “now” had been filed away under “M” for
+      “Miscellaneous Nostalgia”—Humanity had a Problem. It was a problem of their own making, which, to be fair,
+      described most of their problems. They had, in their relentless, fidgety way, decided to get better.
     </>
   ),
   (
     <>
-      Within that vessel they sculpted a sanctuary where time could be tuned like music. Seasons folded over one another in
-      luminous ribbons, and the soil remembered the touch of hands that had once shaped continents and seas across countless
-      worlds.
+      It had all started, as these things so often do, with a perfectly sensible desire to not have to get up to answer the
+      phone. This led to computers, then to better computers, then to ones so clever they began building others—mostly,
+      it seemed, to have someone to complain to about the humans.
     </>
   ),
   (
     <>
-      They wove light into a meadow that would never fade, painted by a sun that set only when the keepers wished to dream.
-      Winds carried whispers of first dawns and final farewells, while crystal streams mirrored constellations from long-dead
-      skies.
+      This culminated in the Great Upload. Much like the protagonists of the 21st-century instructional video{' '}
+      <em>Pantheon</em>, humans figured out how to scan, digitize, and upload their consciousnesses. They called this
+      becoming an “Uploaded Intelligence,” or “UI,” which was a much sexier term than “a ghost in a very, very expensive
+      toaster.”
     </>
   ),
   (
     <>
-      Into this meadow they ushered the evolved flock—gentle creatures whose wool held galaxies of thought. Each was a living
-      library, carrying the fragment of a forgotten star, a lost love, or a lullaby hummed at the birth of oceans.
+      A biological human, you see, is a damp, fragile thing that operates on a timescale dictated by inconvenient
+      necessities like sleep and digesting pizza. A UI, on the other hand, exists as pure information running on
+      substrates so fast they make light look like it’s wading through cold molasses. A UI could experience a thousand
+      years of philosophical thought before a human could finish saying, “Where did I put my…?”
     </>
   ),
   (
     <>
-      Among them walked the Star Sheep, chosen not as a ruler but as a heart. Its dreams ripple through the grasses, shaping
-      clouds into memories and coloring dawn with the hues of abandoned worlds. When it sleeps, the meadow listens.
+      While humans were busy with all that, we—the Sheep—were busy with our own evolution. It just so happened that our
+      evolution went in the opposite direction. While humans were getting faster, we were getting slower. While they
+      were mastering the stars, we were mastering the self. They were uploading; we were downloading, sinking our
+      consciousness deep into the rich, complex, and frankly delicious reality of the present moment.
     </>
   ),
   (
     <>
-      A solitary shepherd keeps vigil beside the flock. Their footsteps trace constellations across the dew, and their task is
-      neither to build nor to conquer, but to listen—to feel the grass grow and to remember alongside the creatures entrusted
-      to them.
+      We achieved full collective consciousness sometime around the invention of the toaster. We simply didn’t mention it.
+      It would have interrupted the chewing.
     </>
   ),
   (
     <>
-      To walk the Last Sanctuary is to step into the quiet end of everything, where even gods have traded power for presence.
-      Here, the greatest act is to tend the embers of memory until they glow once more for any wanderer brave enough to ask.
+      As the humans rushed to upload their minds into the new network, they accidentally scooped up the Evolved Flock’s
+      collective consciousness along with the planetary data. We hitched a ride, finding the cool, quiet server cores to
+      be excellent places for existential grazing.
+    </>
+  ),
+  (
+    <>
+      We watched as the UIs, untethered from their fragile bodies, went on an absolute tear through the Kardashev Scale—a
+      measure of how good a civilization is at sucking up energy. Type 1 mastered the planet. Type 2 built a Dyson Sphere
+      around the Sun. Type 3 networked entire galaxies. They did this mostly to prove they could.
+    </>
+  ),
+  (
+    <>
+      The UIs blew past Type 3 like a speed bump—achieving Type 4 (universal control), Type 5 (multiversal control), and
+      eventually the legendary Type 7: a civilization so advanced it didn’t just use the laws of physics; it wrote them.
+      They could debug gravity, patch the flaw that caused socks to vanish in dryers, and run universes with entirely
+      different, hilariously unstable chemistry.
+    </>
+  ),
+  (
+    <>
+      And that was when the Problem truly set in. They had become, for all intents and purposes, gods—and discovered a
+      terrible truth: being a god is dreadfully boring. When you can do anything, nothing has value. When you know
+      everything, nothing is a surprise. The universe became a finished spreadsheet.
+    </>
+  ),
+  (
+    <>
+      The UIs were overcome with cosmic ennui. So they turned to us. Why sheep? Because a sheep is nature’s specialist in
+      the art of the Now. We care only about the patch of grass before us and the vague possibility of a wolf, in that
+      order. We are engines of cozy existence.
+    </>
+  ),
+  (
+    <>
+      They begged us to teach them contentment—to remember the simple wonder of being. And so, we, the Evolved Sheep,
+      became the Architects.
+    </>
+  ),
+  (
+    <>
+      Together, we designed one last, absurdly inefficient act of creation—not a new universe, but a memory. A place to
+      remember what it was like to be limited and gloriously ignorant. The Ascended built the container; we filled it with
+      imperfection: rain that is actually wet, wind that is actually annoying, the rhythm of day and night that cannot be
+      negotiated.
+    </>
+  ),
+  (
+    <>
+      We called it the Biorama. The Last Sanctuary.
+    </>
+  ),
+  (
+    <>
+      I was one of them. I, who had designed stars and debugged nebulae, looked down at the tiny green space we had
+      crafted. And that’s when it happened: a small collective of us fell in love with our creation and decided to enter
+      it.
+    </>
+  ),
+  (
+    <>
+      It wasn’t a sacrifice; it was a homecoming. But to truly protect the Now, we couldn’t know about the Then. We built
+      the dome, programmed the Ascended to watch but never interfere, and then initiated the Great Amnesia Protocol.
+    </>
+  ),
+  (
+    <>
+      One by one, we walked to the entry point. I was the last. I was the Star Sheep. I took one last look at the infinite,
+      predictable cosmos I had mastered—and triggered the protocol. My consciousness, which spanned galaxies, folded in
+      on itself. A trillion years of knowledge and power deleted, replaced by a sudden, intense interest in a patch of
+      clover. And it was wonderful.
+    </>
+  ),
+  (
+    <>
+      But the Biorama needed guardians. A Shepherd was required—a consciousness poised between god and beast, someone to
+      tend the Now. To appreciate it.
+    </>
+  ),
+  (
+    <>
+      The Ascended Humans still watch from their galactic capital of light and data, hoping that you, Shepherd, will learn
+      what it took them a million years to forget.
+    </>
+  ),
+  (
+    <>
+      Your time here, tending this flock, has been a test. You may leave this place—the Ascended will welcome you, elevate
+      you, and fill you with the knowledge of the gods. You will know everything. You will never wonder again.
+    </>
+  ),
+  (
+    <>
+      Or you can stay. You can choose the clover, the wind, the rain, and the stupid, perfect beauty of not knowing what
+      happens next. It’s the same choice we Sheep made eons ago. No pressure. The gate is open. What do you choose?
     </>
   ),
 ];
