@@ -60,19 +60,61 @@
       }
 
       @keyframes flip-in {
-        from {
-          transform: perspective(1000px) rotateY(-60deg) scale(0.9);
+        0% {
+          transform: perspective(1200px) rotateY(-80deg) translateX(-2%) scale(0.92);
           opacity: 0;
+          filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.35));
         }
-        to {
-          transform: perspective(1000px) rotateY(0deg) scale(1);
+        50% {
+          transform: perspective(1200px) rotateY(18deg) translateX(1.2%) scale(1.03);
+          opacity: 0.85;
+          filter: drop-shadow(0 20px 36px rgba(0, 0, 0, 0.5));
+        }
+        70% {
+          transform: perspective(1200px) rotateY(-6deg) translateX(-0.8%) scale(0.995);
+          opacity: 0.95;
+          filter: drop-shadow(0 16px 30px rgba(0, 0, 0, 0.45));
+        }
+        100% {
+          transform: perspective(1200px) rotateY(0deg) translateX(0) scale(1);
           opacity: 1;
+          filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.4));
+        }
+      }
+
+      @keyframes flip-out {
+        0% {
+          transform: perspective(1200px) rotateY(0deg) translateX(0) scale(1);
+          opacity: 1;
+          filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.4));
+        }
+        50% {
+          transform: perspective(1200px) rotateY(14deg) translateX(1%) scale(1.02);
+          opacity: 0.85;
+          filter: drop-shadow(0 20px 36px rgba(0, 0, 0, 0.5));
+        }
+        70% {
+          transform: perspective(1200px) rotateY(-10deg) translateX(-1.1%) scale(0.97);
+          opacity: 0.55;
+          filter: drop-shadow(0 16px 30px rgba(0, 0, 0, 0.42));
+        }
+        100% {
+          transform: perspective(1200px) rotateY(-70deg) translateX(-2.2%) scale(0.9);
+          opacity: 0;
+          filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
         }
       }
 
       .animate-flip-in {
-        animation: flip-in 0.6s ease-out forwards;
+        animation: flip-in 0.9s cubic-bezier(0.25, 0.9, 0.3, 1.2) forwards;
         transform-origin: center left;
+        will-change: transform;
+      }
+
+      .animate-flip-out {
+        animation: flip-out 0.85s cubic-bezier(0.3, 0.7, 0.4, 1.1) forwards;
+        transform-origin: center left;
+        will-change: transform;
       }
     </style>
 
