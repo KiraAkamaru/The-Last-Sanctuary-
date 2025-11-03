@@ -143,26 +143,6 @@ const ComicBookSection: React.FC = () => {
     setIsAnimating(false);
   };
 
-  const toggleFullscreen = () => {
-    setIsFullscreen((prev) => !prev);
-  };
-
-  const viewerLayoutClasses = `relative flex w-full flex-col items-center justify-center gap-8 ${
-    isFullscreen ? 'min-h-screen h-screen' : 'mx-auto sm:max-w-3xl md:max-w-4xl lg:max-w-5xl'
-  }`;
-
-  const panelFrameClasses = `w-full rounded-[2.5rem] bg-[#05050b] p-6 sm:p-8 lg:p-12 shadow-[0_25px_60px_rgba(0,0,0,0.6)] ${
-    isFullscreen ? 'h-full min-h-[60vh]' : 'mx-auto max-h-[70vh] sm:max-w-3xl md:max-w-4xl lg:max-w-5xl'
-  }`;
-
-  const imageWrapperClasses = `flex w-full items-center justify-center overflow-hidden rounded-[1.75rem] bg-black ${
-    isFullscreen ? 'h-full' : 'mx-auto max-h-[70vh]'
-  }`;
-
-  const imageClasses = `w-full object-contain animate-flip-in ${
-    isFullscreen ? 'h-full' : 'h-auto max-h-[70vh]'
-  }`;
-
   return (
     <section className="bg-[#0a0a14] py-20">
       <div className="mx-auto w-full px-4 sm:px-6 lg:px-12">
@@ -172,7 +152,7 @@ const ComicBookSection: React.FC = () => {
         </FadeInSection>
 
         <FadeInSection className="w-full">
-          <div className={viewerLayoutClasses}>
+          <div className="relative flex min-h-screen w-full flex-col items-center justify-center gap-8">
             <div className="w-full">
               <div className="relative w-full overflow-visible">
                 <div className="min-h-[60vh] rounded-[2.5rem] bg-[#05050b] p-6 sm:p-8 lg:p-12 shadow-[0_25px_60px_rgba(0,0,0,0.6)]">
