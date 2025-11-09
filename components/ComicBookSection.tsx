@@ -106,6 +106,19 @@ const ComicBookSection: React.FC = () => {
   const [outgoingIndex, setOutgoingIndex] = useState<number | null>(null);
   const [isAnimating, setIsAnimating] = useState(false);
   const [direction, setDirection] = useState<'forward' | 'backward'>('forward');
+  const [isFullscreen, setIsFullscreen] = useState(false);
+
+  const viewerLayoutClasses = `relative flex min-h-screen w-full flex-col justify-center gap-8 ${
+    isFullscreen ? 'items-stretch h-full flex-1' : 'items-center'
+  }`;
+
+  const panelColumnClasses = `w-full${isFullscreen ? ' h-full flex-1' : ''}`;
+  const panelFrameWrapperClasses = `relative w-full overflow-visible${
+    isFullscreen ? ' h-full flex-1' : ''
+  }`;
+  const panelFrameClasses = `min-h-[60vh] rounded-[2.5rem] bg-[#05050b] p-6 sm:p-8 lg:p-12 shadow-[0_25px_60px_rgba(0,0,0,0.6)]${
+    isFullscreen ? ' h-full' : ''
+  }`;
 
   const beginTransition = (targetIndex: number) => {
     if (targetIndex === activeIndex || targetIndex < 0 || targetIndex >= comicPanels.length) {
@@ -152,10 +165,10 @@ const ComicBookSection: React.FC = () => {
         </FadeInSection>
 
         <FadeInSection className="w-full">
-          <div className="relative flex min-h-screen w-full flex-col items-center justify-center gap-8">
-            <div className="w-full">
-              <div className="relative w-full overflow-visible">
-                <div className="min-h-[60vh] rounded-[2.5rem] bg-[#05050b] p-6 sm:p-8 lg:p-12 shadow-[0_25px_60px_rgba(0,0,0,0.6)]">
+          <div className={viewerLayoutClasses}>
+            <div className={panelColumnClasses}>
+              <div className={panelFrameWrapperClasses}>
+                <div className={panelFrameClasses}>
                   <div className="relative flex h-full w-full items-center justify-center overflow-hidden rounded-[1.75rem] bg-black">
                     {outgoingIndex !== null && (
                       <img
@@ -195,6 +208,16 @@ const ComicBookSection: React.FC = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                 </svg>
                 <span>Prev</span>
+              </button>
+
+              <button
+                type="button"
+                onClick={() => setIsFullscreen((prev) => !prev)}
+                className="flex items-center space-x-2 transition-colors hover:text-white"
+                aria-pressed={isFullscreen}
+                aria-label={isFullscreen ? 'Exit fullscreen comic view' : 'Enter fullscreen comic view'}
+              >
+                <span>{isFullscreen ? 'Exit Fullscreen' : 'Fullscreen'}</span>
               </button>
 
               <span className="font-mono text-xs uppercase tracking-[0.35em] text-slate-400">
